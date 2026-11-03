@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Básico -->
+    <title>Eduardo Gabriel | Desenvolvedor Full-Stack Jr. — IFRS Certificado</title>
+    <meta name="description" content="Desenvolvedor Full-Stack em formação. Certificado pelo IFRS (200h). HTML, CSS, JavaScript, Java, Python e PHP. 17 anos estudando tecnologia.">
+    <meta name="keywords" content="desenvolvedor, full-stack, html, css, javascript, java, python, php, ifrs, freela">
+    <meta name="author" content="Eduardo Gabriel Teixeira">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Eduardo Gabriel | Desenvolvedor Full-Stack Jr.">
+    <meta property="og:description" content="17 anos estudando. 200h no IFRS. Pronto pra entregar.">
+    <meta property="og:type" content="website">
+    
+   <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+</head>
+<body>
+
+    <!-- ==================== HEADER ==================== -->
+    <header>
+        <div class="interface flex">
+            <div class="logo">
+                <a href="#inicio">
+                    <img src="images/logo.jpg" alt="Logo Eduardo Gabriel">
+                </a>
+            </div>
+
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#especialidades">Especialidades</a></li>
+                    <li><a href="#certificacoes">Certificações</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                </ul>
+            </nav>
+
+            <div class="btn-contato">
+                <a href="#contato">
+                    <button>Contato</button>
+                </a>
+            </div>
+
+            <div class="btn-abrir" id="btn-menu">
+                <i class="bi bi-list"></i>
+            </div>
+
+            <div class="menu-mobile" id="menu-mobile">
+                <div class="btn-fechar">
+                    <i class="bi bi-x-lg"></i>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#especialidades">Especialidades</a></li>
+                        <li><a href="#certificacoes">Certificações</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#projetos">Projetos</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="overlay-menu" id="overlay-menu"></div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ==================== TOPO / HERO ==================== -->
+        <section class="topo-do-site" id="inicio">
+            <div class="interface">
+                <div class="flex">
+                    <div class="txt-top-site efeito-txt-site">
+                        <span class="badge-topo">👋 Olá, eu sou Eduardo</span>
+                        <h1>17 anos estudando tecnologia. <span>200h no Instituto Federal. Agora, seu próximo dev.</span></h1>
+                        <p>Desenvolvedor Full-Stack em formação. Certificado pelo IFRS, com base sólida em HTML, CSS, JavaScript, Java, Python e PHP.</p>
+                        <div class="botoes-hero">
+                            <a href="#projetos" class="btn-primario">Ver Projetos</a>
+                            <a href="#contato" class="btn-secundario">Vamos conversar</a>
+                        </div>
+                        <div class="metricas-hero">
+                            <div class="metrica">
+                                <strong>17+</strong>
+                                <span>anos de estrada</span>
+                            </div>
+                            <div class="metrica">
+                                <strong>200h</strong>
+                                <span>IFRS certificado</span>
+                            </div>
+                            <div class="metrica">
+                                <strong>6+</strong>
+                                <span>tecnologias dominadas</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="imagem-topo-site efeito-img-top">
+                        <img src="images/perfil.jpg" alt="Foto de Eduardo Gabriel">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== ESPECIALIDADES ==================== -->
+        <section class="especialidades" id="especialidades">
+            <div class="interface">
+                <h2 class="titulo">MINHAS <span>ESPECIALIDADES</span></h2>
+                <p class="subtitulo">Stack completa pra entregar do front ao back-end</p>
+
+                <div class="flex">
+                    <div class="especialidades-box efeito-especialidades1">
+                        <i class="bi bi-code-square"></i>
+                        <h3>Front-End</h3>
+                        <p>Interfaces modernas, responsivas e otimizadas. HTML5, CSS3, JavaScript e React.</p>
+                    </div>
+
+                    <div class="especialidades-box efeito-especialidades2">
+                        <i class="bi bi-server"></i>
+                        <h3>Back-End</h3>
+                        <p>APIs robustas, lógica de negócio e integração com banco de dados. Java, Python e PHP.</p>
+                    </div>
+
+                    <div class="especialidades-box efeito-especialidades3">
+                        <i class="bi bi-cart-check"></i>
+                        <h3>E-commerce</h3>
+                        <p>Lojas virtuais completas com pagamento, frete e painel administrativo.</p>
+                    </div>
+                </div>
+
+                <!-- Stack de Tecnologias -->
+                <div class="tech-stack">
+                    <h3 class="titulo-stack">Stack completa que eu domino</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item flex"><i class="bi bi-filetype-html"></i><span>HTML5</span></div>
+                        <div class="tech-item flex"><i class="bi bi-filetype-css"></i><span>CSS3</span></div>
+                        <div class="tech-item flex"><i class="bi bi-filetype-js"></i><span>JavaScript</span></div>
+                        <div class="tech-item flex"><i class="bi bi-filetype-java"></i><span>Java</span></div>
+                        <div class="tech-item flex"><i class="bi bi-filetype-py"></i><span>Python</span></div>
+                        <div class="tech-item flex"><i class="bi bi-filetype-php"></i><span>PHP</span></div>
+                        <div class="tech-item flex"><i class="bi bi-react"></i><span>React</span></div>
+                        <div class="tech-item flex"><i class="bi bi-database"></i><span>SQL</span></div>
+                        <div class="tech-item flex"><i class="bi bi-git"></i><span>Git</span></div>
+                        <div class="tech-item flex"><i class="bi bi-github"></i><span>GitHub</span></div>
+                        <div class="tech-item flex"><i class="bi bi-bootstrap"></i><span>Bootstrap</span></div>
+                        <div class="tech-item flex"><i class="bi bi-wordpress"></i><span>WordPress</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== CERTIFICAÇÕES ==================== -->
+        <section class="certificacoes" id="certificacoes">
+            <div class="interface">
+                <h2 class="titulo">MINHAS <span>CERTIFICAÇÕES</span></h2>
+                <p class="subtitulo">Formação técnica e cursos que comprovam minha base</p>
+
+                <div class="flex">
+                    <div class="cert-box efeito-cert1">
+                        <div class="cert-badge flex">
+                            <i class="bi bi-patch-check-fill"></i>
+                        </div>
+                        <h3>Programador Web</h3>
+                        <p class="cert-instituicao">Instituto Federal do RS (IFRS)</p>
+                        <p class="cert-info">200 horas • Conclusão: Nov/2024 • Aproveitamento: 80%</p>
+                        <p class="cert-conteudo">HTML, CSS, JavaScript, Lógica de Programação, Banco de Dados e Projetos Web.</p>
+                        <a href="#" class="cert-link" target="_blank"><i class="bi bi-file-earmark-pdf"></i> Ver certificado</a>
+                    </div>
+
+                    <div class="cert-box efeito-cert2">
+                        <div class="cert-badge flex">
+                            <i class="bi bi-patch-check-fill"></i>
+                        </div>
+                        <h3>Java Completo</h3>
+                        <p class="cert-instituicao">Formação Java (Módulos 1, 2 e 3)</p>
+                        <p class="cert-info">Orientação a Objetos, Collections, Spring Boot, JDBC e Projetos.</p>
+                        <p class="cert-conteudo">Java do zero ao avançado com foco em aplicações reais.</p>
+                        <a href="#" class="cert-link" target="_blank"><i class="bi bi-file-earmark-pdf"></i> Ver certificado</a>
+                    </div>
+
+                    <div class="cert-box efeito-cert3">
+                        <div class="cert-badge flex">
+                            <i class="bi bi-patch-check-fill"></i>
+                        </div>
+                        <h3>Python</h3>
+                        <p class="cert-instituicao">Curso de Python</p>
+                        <p class="cert-info">Fundamentos, automação, scripts e lógica aplicada.</p>
+                        <p class="cert-conteudo">Python para desenvolvimento, automação e análise de dados.</p>
+                        <a href="#" class="cert-link" target="_blank"><i class="bi bi-file-earmark-pdf"></i> Ver certificado</a>
+                    </div>
+
+                    <div class="cert-box efeito-cert4">
+                        <div class="cert-badge flex">
+                            <i class="bi bi-patch-check-fill"></i>
+                        </div>
+                        <h3>PHP</h3>
+                        <p class="cert-instituicao">Curso de PHP</p>
+                        <p class="cert-info">Back-end, integração com banco de dados e desenvolvimento web.</p>
+                        <p class="cert-conteudo">PHP para aplicações web dinâmicas e APIs.</p>
+                        <a href="#" class="cert-link" target="_blank"><i class="bi bi-file-earmark-pdf"></i> Ver certificado</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SOBRE ==================== -->
+        <section class="sobre" id="sobre">
+            <div class="interface">
+                <div class="flex">
+                    <div class="img-sobre efeito-img-sobre">
+                        <img src="images/profile.png" alt="Eduardo Gabriel">
+                    </div>
+
+                    <div class="txt-sobre efeito-txt-sobre">
+                        <h2>MUITO PRAZER, <span>SOU EDUARDO</span></h2>
+                        <p>
+                            Há <strong>17 anos</strong> a tecnologia me fascina. Comecei estudando sozinho, com tudo em inglês e nenhum professor. 
+                            Em 2024, formalizei minha base com o curso de <strong>Programador Web no IFRS</strong> (200h, aproveitamento de 80%).
+                        </p>
+                        <p>
+                            Hoje trabalho com <strong>HTML, CSS, JavaScript, Java, Python e PHP</strong>, e sigo estudando todo dia. 
+                            Se você busca um dev que <strong>not desiste</strong>, acabou de encontrar.
+                        </p>
+                        <p>
+                            Tenho <strong>alta didática</strong> (aprendi a programar sem ajuda de ninguém), sou comprometido com prazo e 
+                            entrego código limpo, documentado e funcional. <strong>Vamos conversar?</strong>
+                        </p>
+
+                        <div class="btn-social">
+                            <a href="https://instagram.com/" target="_blank" rel="noopener"><button aria-label="Instagram"><i class="bi bi-instagram"></i></button></a>
+                            <a href="https://youtube.com/" target="_blank" rel="noopener"><button aria-label="YouTube"><i class="bi bi-youtube"></i></button></a>
+                            <a href="https://linkedin.com/" target="_blank" rel="noopener"><button aria-label="LinkedIn"><i class="bi bi-linkedin"></i></button></a>
+                            <a href="https://github.com/" target="_blank" rel="noopener"><button aria-label="GitHub"><i class="bi bi-github"></i></button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== PROJETOS ==================== -->
+        <section class="portfolio" id="projetos">
+            <div class="interface">
+                <h2 class="titulo">MEU <span>PORTFÓLIO</span></h2>
+                <p class="subtitulo">Projetos reais que entregam resultado de verdade</p>
+
+                <div class="flex">
+                    <div class="img-import efeito-portfolio1">
+                        <img src="images/projeto1.jfif" alt="E-commerce Flora Cosméticos">
+                        <div class="overlay flex">
+                            <div class="overlay-content">
+                                <span class="tag">E-commerce</span>
+                                <h3>Flora Cosméticos</h3>
+                                <p>Loja virtual completa que gerou R$ 18.400 em 30 dias após o lançamento.</p>
+                                <div class="techs">
+                                    <span>HTML</span><span>CSS</span><span>JS</span><span>PHP</span>
+                                </div>
+                                <div class="links-projeto">
+                                    <a href="#" target="_blank" class="flex"><i class="bi bi-box-arrow-up-right"></i> Demo</a>
+                                    <a href="#" target="_blank" class="flex"><i class="bi bi-github"></i> Código</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="img-import efeito-portfolio2">
+                        <img src="images/projeto2.jfif" alt="Landing Page Academia Fit">
+                        <div class="overlay flex">
+                            <div class="overlay-content">
+                                <span class="tag">Landing Page</span>
+                                <h3>Academia Fit Pro</h3>
+                                <p>Landing page de alta conversão que captou 320 leads em 15 dias.</p>
+                                <div class="techs">
+                                    <span>HTML</span><span>CSS</span><span>JS</span>
+                                </div>
+                                <div class="links-projeto">
+                                    <a href="#" target="_blank" class="flex"><i class="bi bi-box-arrow-up-right"></i> Demo</a>
+                                    <a href="#" target="_blank" class="flex"><i class="bi bi-github"></i> Código</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="img-import efeito-portfolio3">
+                        <img src="images/projeto3.jfif" alt="Dashboard Administrativo">
+                        <div class="overlay flex">
+                            <div class="overlay-content">
+                                <span class="tag">Dashboard</span>
+                                <h3>Gestor Pro</h3>
+                                <p>Painel administrativo em Java que reduziu tempo de gestão em 62%.</p>
+                                <div class="techs">
+                                    <span>Java</span><span>SQL</span><span>Spring</span>
+                                </div>
+                                <div class="links-projeto">
+                                    <a href="#" target="_blank" class="flex"><i class="bi bi-box-arrow-up-right"></i> Demo</a>
+                                    <a href="#" target="_blank" class="flex"><i class="bi bi-github"></i> Código</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       <!-- ==================== DEPOIMENTOS ==================== -->
+        <section class="depoimentos">
+            <div class="interface">
+                <h2 class="titulo">O QUE <span>CLIENTES DIZEM</span></h2>
+
+                <div class="flex">
+                    <div class="depoimento-box">
+                        <img src="images/depoimento.jfif" alt="Depoimento de Clientes nas Redes Sociais">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== FORMULÁRIO / CONTATO ==================== -->
+        <section class="formulario" id="contato">
+            <div class="interface">
+                <h2 class="titulo">FALA <span>COMIGO</span></h2>
+                <p class="subtitulo">Tem um projeto em mente? Vamos transformar em realidade.</p>
+
+                <form action="https://formsubmit.co/programador.edu.dev@gmail.com" method="POST">
+                    <input class="efeito-form" type="text" name="name" placeholder="Seu nome completo" required>
+                    <input class="efeito-form1" type="email" name="email" placeholder="Seu melhor e-mail" required>
+                    <input class="efeito-form2" type="text" name="phone" placeholder="Seu WhatsApp (opcional)">
+                    <textarea class="efeito-form3" name="message" placeholder="Me conta sobre seu projeto..." required></textarea>
+
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://eduardogabrielt.github.io/meu-portfolio/">
+
+                    <div class="btn-enviar efeito-form4">
+                        <input type="submit" value="Enviar mensagem">
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+        <div class="interface">
+            <div class="line-footer">
+                <div class="flex">
+                    <div class="logo-footer">
+                        <img src="images/logo.jpg" alt="Logo Eduardo Gabriel">
+                    </div>
+                    <div class="btn-social">
+                        <a href="https://instagram.com/" target="_blank"><button><i class="bi bi-instagram"></i></button></a>
+                        <a href="https://youtube.com/" target="_blank"><button><i class="bi bi-youtube"></i></button></a>
+                        <a href="https://linkedin.com/" target="_blank"><button><i class="bi bi-linkedin"></i></button></a>
+                        <a href="https://github.com/" target="_blank"><button><i class="bi bi-github"></i></button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="line-footer borda">
+                <p><i class="bi bi-envelope-fill"></i> <a href="mailto:programador.edu.dev@gmail.com">programador.edu.dev@gmail.com</a></p>
+                <p class="copy">&copy; 2025 Eduardo Gabriel. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/Reveal.js" defer></script>
+    <script src="js/Menu.js" defer></script>
+</body>
+</html>
