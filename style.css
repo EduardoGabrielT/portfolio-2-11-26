@@ -838,7 +838,7 @@ footer .flex {
     }
 
     h2.titulo {
-        font-size: 28px;
+        font-size: 24px;
     }
 
     .topo-do-site .flex {
@@ -852,11 +852,17 @@ footer .flex {
     }
 
     .topo-do-site h1 {
-        font-size: 30px;
+        font-size: 26px;
+        line-height: 1.3;
     }
 
     .topo-do-site h1 span {
-        font-size: 22px;
+        font-size: 18px;
+    }
+
+    .topo-do-site p {
+        font-size: 14px;
+        padding: 0 10px;
     }
 
     .botoes-hero,
@@ -864,13 +870,14 @@ footer .flex {
         justify-content: center;
     }
 
+    /* Oculta a imagem grande do topo no mobile */
+    .imagem-topo-site,
     .imagem-topo-site img {
-        width: 250px;
-        height: 300px;
+        display: none !important;
     }
 
     .sobre .txt-sobre h2 {
-        font-size: 28px;
+        font-size: 24px;
         text-align: center;
     }
 
@@ -879,12 +886,12 @@ footer .flex {
     }
 
     .img-sobre img {
-        max-width: 280px;
+        max-width: 250px;
     }
 
     .img-import {
         max-width: 100%;
-        height: 400px;
+        height: auto;
     }
 
     footer .flex {
@@ -895,24 +902,285 @@ footer .flex {
 
 @media screen and (max-width: 600px) {
     .topo-do-site h1 {
-        font-size: 24px;
+        font-size: 22px;
     }
 
     .topo-do-site h1 span {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .metrica strong {
-        font-size: 26px;
+        font-size: 22px;
     }
 
     .metricas-hero {
-        gap: 25px;
+        gap: 15px;
     }
 
     .btn-primario,
     .btn-secundario {
         width: 100%;
         text-align: center;
+        padding: 12px;
+        font-size: 14px;
     }
+
+    @media screen and (max-width: 1020px) {
+    /* Oculta a seção de especialidades na tela principal do mobile */
+    #especialidades {
+        display: none !important;
+    }
+}
+/* ==================== ALINHAMENTO DO TOPO NO MOBILE ==================== */
+@media screen and (max-width: 1020px) {
+    header {
+        width: 100%;
+        padding: 10px 4% !important;
+        background-color: var(--bg-main);
+    }
+
+    /* Alinha a logo e o botão hambúrguer perfeitamente na mesma linha */
+    header .interface {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        width: 100% !important;
+    }
+
+    /* Estilo e ponteiro do botão de abrir o menu */
+    .btn-abrir, #btn-menu {
+        display: block !important;
+        cursor: pointer !important;
+        z-index: 9999;
+    }
+
+    .btn-abrir i, #btn-menu i {
+        font-size: 30px !important;
+        color: var(--primary);
+    }
+}
+
+/* ==================== MENU MOBILE MODERNO E TRANSLÚCIDO ==================== */
+
+.menu-mobile {
+    background-color: rgba(11, 15, 14, 0.75); /* Fundo escuro translúcido */
+    backdrop-filter: blur(12px);               /* Efeito de desfoque moderno (Glassmorphism) */
+    -webkit-backdrop-filter: blur(12px);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    width: 0;
+    overflow: hidden;
+    transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.08); /* Borda sutil */
+}
+
+.menu-mobile.menu-abrir {
+    width: 65%; /* Largura elegante que não tampa a visão inteira */
+}
+
+.menu-mobile .btn-fechar {
+    padding: 25px 20px;
+    text-align: right;
+}
+
+.menu-mobile .btn-fechar i {
+    color: #ffffff;
+    font-size: 26px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.menu-mobile .btn-fechar i:hover {
+    color: var(--primary);
+}
+
+.menu-mobile nav ul {
+    text-align: right;
+    list-style: none;
+    padding-top: 10px;
+}
+
+.menu-mobile nav ul li a {
+    color: #d0d0d0;
+    font-size: 16px; /* Letras menores e mais limpas */
+    font-weight: 400;
+    padding: 12px 10%;
+    display: block;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.menu-mobile nav ul li a:hover {
+    color: var(--primary);
+    background-color: rgba(0, 255, 136, 0.08); /* Hover suave */
+    padding-right: 12%;
+}
+
+/* Fundo escuro de cobertura um pouco mais transparente */
+.overlay-menu {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 8888;
+    display: none;
+}
+
+.menu-mobile.menu-abrir ~ .overlay-menu {
+    display: block;
+}
+
+@media screen and (max-width: 1020px) {
+    /* 1. REDUÇÃO DOS ESPAÇOS ENTRE SEÇÕES */
+    section {
+        padding: 40px 5% !important; /* Reduz drasticamente o espaçamento vertical entre as seções */
+        margin: 0 !important;
+    }
+
+    /* 2. AJUSTE DOS TEXTOS DE APRESENTAÇÃO */
+    .sobre p, 
+    section p {
+        font-size: 15px !important;
+        line-height: 1.5 !important;
+    }
+
+    .sobre h2, 
+    section h2 {
+        font-size: 24px !important;
+        margin-bottom: 15px !important;
+    }
+
+    /* 3. CORREÇÃO DOS CARDS DE CERTIFICAÇÕES E PROJETOS */
+    /* Faz com que os cards ocupem bem o espaço sem ficarem gigantes */
+    .cards-certificacoes, 
+    .projeto-box, 
+    .especialidades-box {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 20px !important;
+        margin-bottom: 20px !important;
+    }
+
+    /* Reduz o tamanho das letras e imagens dentro dos cards */
+    .cards-certificacoes h3, 
+    .projeto-box h3 {
+        font-size: 18px !important;
+    }
+
+    .cards-certificacoes p, 
+    .projeto-box p {
+        font-size: 14px !important;
+    }
+
+    /* 4. AJUSTE DE IMAGENS DE SUPORTE */
+    img, .img-sobre img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}
+
+/* ==================== CORREÇÃO DA SEÇÃO DE CERTIFICAÇÕES NO MOBILE ==================== */
+@media screen and (max-width: 1020px) {
+    /* Garante que a seção respeite os limites da tela do celular */
+    .certificacoes {
+        padding: 40px 5% !important;
+        overflow-x: hidden; /* Evita qualquer scroll horizontal indesejado */
+    }
+
+    /* Força os cards a empilharem em coluna e ocuparem 100% da largura */
+    .certificacoes .flex {
+        display: flex !important;
+        flex-direction: column !important;
+        flex-wrap: wrap !important;
+        gap: 20px !important;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    /* Ajusta cada card individualmente */
+    .cert-box {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 20px !important;
+        margin: 0 !important;
+    }
+
+    /* Reduz e melhora o tamanho das letras dentro dos cards */
+    .certificacoes h2.titulo {
+        font-size: 24px !important;
+        text-align: center;
+    }
+
+    .certificacoes .subtitulo {
+        font-size: 14px !important;
+        text-align: center;
+        margin-bottom: 25px !important;
+    }
+
+    .cert-box h3 {
+        font-size: 18px !important;
+    }
+
+    .cert-box p, 
+    .cert-box .cert-instituicao, 
+    .cert-box .cert-info, 
+    .cert-box .cert-conteudo {
+        font-size: 13px !important;
+        line-height: 1.4 !important;
+    }
+}
+/* ==================== COMPACTAR CARDS DE CERTIFICAÇÕES NO MOBILE ==================== */
+@media screen and (max-width: 1020px) {
+    /* Deixa o container dos cards bem ajustado à tela */
+    .certificacoes .flex {
+        gap: 12px !important; /* Diminui o espaço entre um card e outro */
+        padding: 0 5px !important;
+    }
+
+    /* Reduz o tamanho físico e o padding interno dos cards */
+    .cert-box {
+        padding: 15px !important; /* Menos espaçamento interno para o card encolher */
+        border-radius: 12px !important;
+        margin-bottom: 5px !important;
+    }
+
+    /* Reduz o ícone do selo/badge de certificação */
+    .cert-badge i {
+        font-size: 22px !important;
+        margin-bottom: 5px !important;
+    }
+
+    /* Títulos e textos dos cards mais compactos e limpos */
+    .cert-box h3 {
+        font-size: 16px !important;
+        margin-bottom: 4px !important;
+    }
+
+    .cert-box p, 
+    .cert-box .cert-instituicao, 
+    .cert-box .cert-info, 
+    .cert-box .cert-conteudo {
+        font-size: 12px !important; /* Textos menores e proporcionais */
+        line-height: 1.35 !important;
+        margin-bottom: 4px !important;
+    }
+
+    /* Botão de ver certificado menor e discreto */
+    .cert-link {
+        font-size: 12px !important;
+        padding: 6px 12px !important;
+        display: inline-block;
+        margin-top: 8px !important;
+    }
+}
+
 }
