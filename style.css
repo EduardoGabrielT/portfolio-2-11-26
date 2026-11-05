@@ -193,6 +193,12 @@ header nav.menu-desktop a:hover {
     display: block;
 }
 
+/* Garante que o botão do menu hambúrguer esteja sempre interativo */
+.btn-abrir, #btn-menu {
+    cursor: pointer !important;
+    z-index: 9999;
+}
+
 /* ==================== TOPO / HERO ==================== */
 section.topo-do-site {
     padding: 80px 4%;
@@ -1182,5 +1188,16 @@ footer .flex {
         margin-top: 8px !important;
     }
 }
-
+@media screen and (max-width: 1020px) {
+    /* Remove ou esconde os círculos/elipses decorativos de fundo que estouram no mobile */
+    .efeito-cert1, 
+    .efeito-cert2, 
+    .efeito-cert3, 
+    .efeito-cert4,
+    .cert-box::before,
+    .cert-box::after {
+        background: none !important;
+        box-shadow: none !important;
+    }
+}
 }
