@@ -1252,4 +1252,16 @@ footer .flex {
     .foto-perfil-mobile {
         display: none !important;
     }
+
+    /* Força a imagem a ficar num quadrado perfeito e redonda */
+.logo img, 
+.header img,
+.foto-perfil {
+    width: 45px !important;       /* Ajusta o tamanho que preferires (ex: 45px) */
+    height: 45px !important;      /* DEVE SER EXATAMENTE IGUAL À LARGURA */
+    min-width: 45px !important;
+    min-height: 45px !important;
+    border-radius: 50% !important; /* Torna o círculo perfeito */
+    object-fit: cover !important;  /* Impede que a foto fique distorcida ou esmagada */
+}
 }
