@@ -1242,4 +1242,12 @@ footer .flex {
     display: none !important;
     content: none !important;
 }
+
+/* Oculta a imagem quebrada ou o container dela apenas no telemóvel */
+    .sobre img, 
+    .apresentacao img, 
+    section#sobre img,
+    .foto-perfil-mobile {
+        display: none !important;
+    }
 }
