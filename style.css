@@ -1225,4 +1225,21 @@ footer .flex {
         background: none !important;
         box-shadow: none !important;
     }
+
+    /* ==================== ANULAÇÃO TOTAL DOS EFEITOS VERDES NOS CARDS ==================== */
+.cert-box[class*="efeito-cert"],
+.efeito-cert1, 
+.efeito-cert2, 
+.efeito-cert3, 
+.efeito-cert4 {
+    background: var(--bg-card) !important;
+    background-image: none !important;
+    box-shadow: none !important;
+}
+
+.cert-box[class*="efeito-cert"]::before,
+.cert-box[class*="efeito-cert"]::after {
+    display: none !important;
+    content: none !important;
+}
 }
