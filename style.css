@@ -1213,4 +1213,16 @@ footer .flex {
         content: none !important;
         background: none !important;
     }
+
+    /* Remove completamente qualquer elipse ou fundo oval decorativo nos cards no mobile */
+    .cert-box [class*="efeito-"],
+    .cert-box::before,
+    .cert-box::after,
+    .certificacoes .flex::before,
+    .certificacoes .flex::after {
+        display: none !important;
+        content: none !important;
+        background: none !important;
+        box-shadow: none !important;
+    }
 }
