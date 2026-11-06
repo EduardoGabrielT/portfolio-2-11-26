@@ -1188,27 +1188,27 @@ footer .flex {
         margin-top: 8px !important;
     }
 }
-@media screen and (max-width: 1020px) {
-    /* Remove ou esconde os círculos/elipses decorativos de fundo que estouram no mobile */
-    .efeito-cert1, 
-    .efeito-cert2, 
-    .efeito-cert3, 
-    .efeito-cert4,
-    .cert-box::before,
-    .cert-box::after {
-        background: none !important;
+/* FORÇA A REMOÇÃO DE QUALQUER FUNDO VERDE OU ELIPSE NOS CARDS NO MOBILE */
+    .cert-box.efeito-cert1,
+    .cert-box.efeito-cert2,
+    .cert-box.efeito-cert3,
+    .cert-box.efeito-cert4 {
+        background: #111111 !important; /* Cor de fundo padrão escura do card */
+        background-color: #111111 !important;
+        background-image: none !important;
         box-shadow: none !important;
     }
-}
 
-/* Remove qualquer elipse, gradiente ou pseudo-elemento decorativo dos cards no mobile */
-    .cert-box [class*="efeito-"],
-    .cert-box::before,
-    .cert-box::after {
+    .cert-box.efeito-cert1::before,
+    .cert-box.efeito-cert2::before,
+    .cert-box.efeito-cert3::before,
+    .cert-box.efeito-cert4::before,
+    .cert-box.efeito-cert1::after,
+    .cert-box.efeito-cert2::after,
+    .cert-box.efeito-cert3::after,
+    .cert-box.efeito-cert4::after {
         display: none !important;
         content: none !important;
         background: none !important;
-        background-image: none !important;
-        box-shadow: none !important;
     }
 }
