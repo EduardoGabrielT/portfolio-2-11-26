@@ -1,0 +1,287 @@
+/* =========================================
+   ESTILOS EXCLUSIVOS DA PÁGINA DE PROJETOS
+   ========================================= */
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: #000;
+    border-bottom: 1px solid #111;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+.btn-voltar {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    padding: 20px 0;
+    transition: color 0.3s;
+}
+
+.btn-voltar:hover {
+    color: #22cb5c;
+}
+
+/* Secção de Projetos e Categorias */
+.projetos {
+    padding: 120px 0 60px 0;
+}
+
+.projetos h2.titulo {
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.projetos h2.titulo span {
+    color: #22cb5c;
+}
+
+.projetos .subtitle {
+    text-align: center;
+    color: #aaa;
+    margin-bottom: 50px;
+    font-size: 16px;
+}
+
+.categoria-secao {
+    margin-bottom: 60px;
+    scroll-margin-top: 100px;
+}
+
+.subtitulo-categoria {
+    color: #22cb5c;
+    font-size: 24px;
+    margin-bottom: 25px;
+    border-left: 4px solid #22cb5c;
+    padding-left: 10px;
+}
+
+/* Estrutura dos Cards */
+.flex {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.img-port {
+    width: 360px;
+    height: 450px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #111;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease-in-out;
+}
+
+.img-port img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.img-port img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Faz com que a imagem apareça inteira, sem cortes */
+    background-color: #000; /* Fundo preto para as faixas que sobrarem */
+    transition: 0.3s;
+}
+
+/* Card de Jogo com Borda Verde Estilizada e Proporção Horizontal */
+.card-jogo {
+    width: 100%;
+    max-width: 650px;
+    height: 360px;
+    background-color: #000;
+    border: 2px solid #22cb5c; /* Borda verde nítida */
+    border-radius: 12px;       /* Cantos arredondados elegantes */
+    overflow: hidden;          /* Garante que a imagem respeita as bordas */
+    box-shadow: 0 0 15px rgba(34, 203, 92, 0.25); /* Sombra verde (efeito neon) */
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Efeito ao passar o rato no card do jogo */
+.card-jogo:hover {
+    box-shadow: 0 0 25px rgba(34, 203, 92, 0.5); /* Aumenta o brilho verde */
+    transform: translateY(-5px);
+}
+
+.card-jogo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;         /* Preenche perfeitamente o espaço horizontal */
+    object-position: center;
+}
+.icone-jogo {
+    height: 100%;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #22cb5c;
+}
+
+/* Efeito Overlay dos Cards */
+.overlay-port {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.88);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+    padding: 20px;
+    text-align: center;
+}
+
+.img-port:hover .overlay-port {
+    opacity: 1;
+}
+
+.img-port:hover img {
+    transform: scale(1.05);
+}
+
+.overlay-port p {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.overlay-port .tech {
+    color: #22cb5c;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.links-projeto a.flex {
+    background-color: #22cb5c;
+    color: #000;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    transition: 0.2s;
+    text-decoration: none;
+    display: inline-flex;
+}
+
+.links-projeto a.flex:hover {
+    transform: scale(1.1);
+    background-color: #fff;
+}
+
+.btn-jogar {
+    width: auto !important;
+    height: auto !important;
+    padding: 10px 20px !important;
+    border-radius: 5px !important;
+    font-weight: bold;
+    gap: 8px;
+    font-size: 16px !important;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #666;
+    border-top: 1px solid #111;
+    margin-top: 50px;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE (MEDIA QUERIES)
+   ========================================= */
+
+/* Para tablets e ecrãs até 768px */
+@media (max-width: 768px) {
+    .projetos {
+        padding: 100px 4% 40px 4%;
+    }
+
+    .projetos h2.titulo {
+        font-size: 28px;
+    }
+
+    .projetos .subtitle {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    /* Os botões de escolha no index passam a ocupar a largura total em coluna */
+    .secao-escolha-projetos {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .btn-categoria {
+        width: 100%;
+        max-width: 320px;
+        padding: 20px;
+    }
+
+    /* Cards de projetos e jogos ajustam-se para ocupar bem o telemóvel */
+    .flex {
+        justify-content: center;
+    }
+
+    .img-port, .card-jogo {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 300px !important; /* Altura menor otimizada para mobile */
+    }
+}
+
+/* Para telemóveis mais pequenos (até 480px) */
+@media (max-width: 480px) {
+    .projetos h2.titulo {
+        font-size: 24px;
+    }
+
+    .img-port, .card-jogo {
+        height: 250px !important;
+    }
+    
+    .overlay-port p {
+        font-size: 20px;
+    }
+    
+    .overlay-port .tech {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+}
